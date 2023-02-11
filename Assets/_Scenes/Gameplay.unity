@@ -1352,12 +1352,12 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 14ace48bff4d5c744a4febcf086290d0, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &2144524919
 MonoBehaviour:
@@ -1371,9 +1371,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bde31ddbef1c0945b8e6d5b9fa28f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballSpeed: 10
+  startingSpeed: 10
   maxSpeed: 20
-  acceleration: 1.05
+  ballStartDelayInSeconds: 1
+  accelerationRate: 1.05
 --- !u!58 &2144524920
 CircleCollider2D:
   m_ObjectHideFlags: 0
