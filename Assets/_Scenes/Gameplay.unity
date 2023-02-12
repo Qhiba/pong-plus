@@ -873,7 +873,7 @@ RectTransform:
   - {fileID: 408923791}
   - {fileID: 1900031377}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -890,6 +890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1226184026}
   - component: {fileID: 1226184025}
+  - component: {fileID: 1226184027}
   m_Layer: 0
   m_Name: Left Goal Area
   m_TagString: Untagged
@@ -937,6 +938,19 @@ Transform:
   m_Father: {fileID: 1127573517}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1226184027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226184024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a31515faa40f814cac837e2ea7368a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle: {fileID: 815111937}
 --- !u!1 &1409522708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,7 +1015,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1521875216
 GameObject:
@@ -1127,6 +1141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1694732232}
   - component: {fileID: 1694732233}
+  - component: {fileID: 1694732234}
   m_Layer: 0
   m_Name: Right Goal Area
   m_TagString: Untagged
@@ -1174,6 +1189,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1694732234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694732231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a31515faa40f814cac837e2ea7368a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle: {fileID: 727397863}
 --- !u!1 &1900031376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,7 +1296,7 @@ GameObject:
   - component: {fileID: 2144524919}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

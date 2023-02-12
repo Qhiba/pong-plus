@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class BallMovement : MonoBehaviour
 {
     [SerializeField] private float startingSpeed = 10.0f;
     [SerializeField] private float maxSpeed = 10.0f;
@@ -16,12 +16,18 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        ResetBall();
+    }
+
+    public void ResetBall()
+    {
+        transform.position = Vector3.zero;
+        rb2d.velocity = Vector2.zero;
         Invoke("BallLaunch", ballStartDelayInSeconds);
     }
 
     private void BallLaunch()
     {
-        Debug.Log("Launch");
         float randomXValue = Random.Range(0.0f, 1.0f) > 0.5 ? 1 : -1;
         float randomYValue = Random.Range(-0.99f, 1.0f);
 
