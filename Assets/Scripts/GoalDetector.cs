@@ -21,11 +21,11 @@ public class GoalDetector : MonoBehaviour
             BallMovement ballMovement = collision.GetComponent<BallMovement>();
             if (paddleName == "Right Paddle")
             {
-                Debug.Log("Left Paddle +1");
+                ScoreManager.Instance.UpdateLeftPaddleScore();
             }
             else if (paddleName == "Left Paddle")
             {
-                Debug.Log("Right Paddle +1");
+                ScoreManager.Instance.UpdateRightPaddleScore();
             }
 
             ballMovement.ResetBall();
