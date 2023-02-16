@@ -16,11 +16,10 @@ public class SceneController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(transform.root.gameObject);
         }
         else
         {
-            Destroy(instance);
+            Destroy(gameObject);
         }
     }
 
@@ -31,7 +30,7 @@ public class SceneController : MonoBehaviour
 
     public void ToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void QuitGame()

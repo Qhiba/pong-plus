@@ -24,7 +24,6 @@ public class ScoreManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(transform.parent);
         }
         else
         {
