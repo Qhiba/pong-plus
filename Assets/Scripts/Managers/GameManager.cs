@@ -44,16 +44,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
 
         // Champion full name will be "Paddle Color + Paddle". This line will take the champion paddle color in RGBA format.
-        string championRGBAColorName = GameObject.Find(championName).GetComponent<SpriteRenderer>().color.ToString();
-        Color championColor;
+        Color championColorCode = GameObject.Find(championName).GetComponent<SpriteRenderer>().color;
+        string championColorName = ColorSetting.GetColorName(championColorCode);
 
-        Debug.Log(championRGBAColorName);
-        // Change the RGBA color format into readable color name.
-        if (ColorUtility.TryParseHtmlString(championRGBAColorName, out championColor))
-        {
-            Debug.Log(championColor);
-            string championColorName = championColor.ToString();
-            championNameText.text = string.Format("{0} Paddle", championColorName);
-        }
+        championNameText.text = string.Format("{0} Paddle", championColorName);
     }
 }

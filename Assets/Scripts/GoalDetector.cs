@@ -19,13 +19,15 @@ public class GoalDetector : MonoBehaviour
         if (collision.transform.CompareTag("Ball"))
         {
             BallMovement ballMovement = collision.GetComponent<BallMovement>();
+            // If the the goal is Right Paddle's, Give Left Paddle Score.
             if (paddleName == "Right Paddle")
             {
-                ScoreManager.Instance.UpdateLeftPaddleScore(paddleName);
+                ScoreManager.Instance.UpdateLeftPaddleScore("Left Paddle");
             }
+            // If the the goal is Left Paddle's, Give Right Paddle Score.
             else if (paddleName == "Left Paddle")
             {
-                ScoreManager.Instance.UpdateRightPaddleScore(paddleName);
+                ScoreManager.Instance.UpdateRightPaddleScore("Right Paddle");
             }
 
             ballMovement.ResetBall();

@@ -53,6 +53,9 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    #region Update Score
+    // Update left paddle score if the ball entered right paddle's goal.
+    // paddleName is the name of the paddle that got scored.
     public void UpdateLeftPaddleScore(string paddleName)
     {
         leftPaddleScore++;
@@ -62,12 +65,17 @@ public class ScoreManager : MonoBehaviour
             maxScoreHolder = paddleName;
     }
 
+    // Update right paddle score if the ball entered left paddle's goal.
+    // paddleName is the name of the paddle that got scored.
     public void UpdateRightPaddleScore(string paddleName)
     {
+        Debug.Log(paddleName);
+
         rightPaddleScore++;
         rightPaddleScoreText.text = rightPaddleScore.ToString();
 
         if (rightPaddleScore > leftPaddleScore)
             maxScoreHolder = paddleName;
     }
+    #endregion
 }
