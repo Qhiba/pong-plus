@@ -5,7 +5,7 @@ using UnityEngine;
 public class PaddleController : MonoBehaviour
 {
     [Range(1f, 20f)]
-    [SerializeField] private float speed = 1.0f;
+    [SerializeField] protected float speed = 1.0f;
 
     [SerializeField] private KeyCode moveUpKey = KeyCode.W;
     [SerializeField] private KeyCode moveDownKey = KeyCode.S;
@@ -21,8 +21,7 @@ public class PaddleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 velocity = new Vector2(0.0f, PaddleInput());
-        rb.velocity = velocity;
+        PaddleMovement();
     }
 
     private float PaddleInput()
@@ -34,5 +33,11 @@ public class PaddleController : MonoBehaviour
             return -speed;
         
         return 0;
+    }
+
+    protected virtual void PaddleMovement()
+    {
+        Vector2 velocity = new Vector2(0.0f, PaddleInput());
+        rb.velocity = velocity;
     }
 }
