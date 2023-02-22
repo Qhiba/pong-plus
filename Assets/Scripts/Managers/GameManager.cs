@@ -50,3 +50,12 @@ public class GameManager : MonoBehaviour
         championNameText.text = string.Format("{0} Paddle", championColorName);
     }
 }
+
+[System.Serializable]
+public struct PaddleConfig
+{
+    public string name;
+    public float speed;
+    public float width;
+    public Color color;
+}
