@@ -103,6 +103,11 @@ public class PaddleCustomization : MonoBehaviour
         return screenHeight * fraction;
     }
 
+    private void SetColorSelectionButton()
+    {
+
+    }
+
     private void SetLeftColor()
     {
 
